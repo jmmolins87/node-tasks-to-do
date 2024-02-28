@@ -80,6 +80,8 @@ const readInput = async( message ) => {
             }
         }
     ]
+
+    const algo = await inquirer.prompt(question);
 }
 
 

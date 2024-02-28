@@ -10,7 +10,15 @@ const main = async() => {
 
     do {
         opt = await inquirerMenu();
-        console.log({ opt });
+        
+        switch (opt) {
+            case '1':
+                // crear opción
+            break;
+            case '2':
+                // listar 
+            break;
+        }
 
         await pause();
     } while (opt !== '0');
