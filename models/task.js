@@ -7,6 +7,7 @@ class Task {
     completedIn = null;
 
     constructor( desc ) {
+        
         this.id = uudiv4(); // Genera un id único
         this.desc = desc;
         this.completedIn = null;

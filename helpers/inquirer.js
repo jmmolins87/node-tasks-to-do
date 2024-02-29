@@ -47,7 +47,6 @@ const inquirerMenu = async() => {
     console.log('===========================\n'.blue);
 
     const { option } = await inquirer.prompt(questionsOpts);
-
     return option;
 }
 
@@ -79,13 +78,15 @@ const readInput = async( message ) => {
                 return true;
             }
         }
-    ]
+    ];
 
-    const algo = await inquirer.prompt(question);
+    const { desc } = await inquirer.prompt(question);
+    return desc;
 }
 
 
 module.exports = {
     inquirerMenu,
-    pause
+    pause,
+    readInput
 }
