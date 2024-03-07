@@ -31,8 +31,7 @@ const main = async() => {
             break;
             case '2':
                 // * Listar 
-                // TODO: completeList();
-                console.log(tasks.listArr);
+                tasks.completeList();
             break;
         }
 

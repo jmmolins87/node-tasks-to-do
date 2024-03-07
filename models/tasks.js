@@ -43,7 +43,9 @@ class Tasks {
         this.listArr.forEach(( task, i ) => {
             const idx = `${ i + 1 }`.green;
             const { desc, completedIn } = task;
-            const state = ( completedIn ) ? 'Completada'.green : 'Pendiente'.red;
+            const state = ( completedIn ) ? 
+                                'Completada'.green : 
+                                'Pendiente'.red;
             console.log(`${ idx } ${ desc } :: ${ state }`);
         });
     }
