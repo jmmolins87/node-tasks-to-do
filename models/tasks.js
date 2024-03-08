@@ -49,6 +49,31 @@ class Tasks {
             console.log(`${ idx } ${ desc } :: ${ state }`);
         });
     }
+
+    pendingCompletedList( completed = true ) {
+        
+        console.log();
+        let count = 0;
+        this.listArr.forEach( task => {
+            const { desc, completedIn } = task;
+            const state = ( completedIn ) ?
+                                'Completada'.green : 
+                                'Pendiente'.red;
+            if ( completed ) {
+                // Mostrar completadas
+                if ( completedIn ) {
+                    count += 1;
+                    console.log(`${ (count + '.').green } ${ desc } :: ${ state }`);
+                }
+            } else {
+                // Mostrar pendientes
+                if ( !completedIn ) {
+                    count += 1;
+                    console.log(`${ (count + '.').green } ${ desc } :: ${ state }`);
+                }
+            }
+        });
+    }
 }
 
 

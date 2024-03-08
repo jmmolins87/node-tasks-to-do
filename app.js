@@ -33,6 +33,12 @@ const main = async() => {
                 // * Listar 
                 tasks.completeList();
             break;
+            case '3':
+                // * Listar completadas
+                tasks.pendingCompletedList(true);
+            case '4':
+                // * Listar pendientes
+                tasks.pendingCompletedList(false);
         }
 
         saveDB( tasks.listArr );
