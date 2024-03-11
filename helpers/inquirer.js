@@ -158,6 +158,5 @@ module.exports = {
     readInput,
     listTasksToDelete,
     confirm,
-    showListCheckList,
-    toggleCompleted
+    showListCheckList
 }
